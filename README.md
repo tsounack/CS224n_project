@@ -10,6 +10,8 @@ Resources to use:
 - https://arxiv.org/abs/1902.10186
 - https://aclanthology.org/D19-1002.pdf
 - https://medium.com/ai-insights-cobet/hybrid-search-and-bm-25-advanced-retrieval-with-code-8cc9801fa454
+- https://arxiv.org/pdf/2110.06393.pdf
+- https://arxiv.org/pdf/2110.03142.pdf
 
 LLMs:
 
