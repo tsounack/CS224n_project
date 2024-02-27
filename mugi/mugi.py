@@ -53,6 +53,7 @@ def generate_pseudo_references(language_model_name: str, topics: Dict[str, Dict[
     Output:
         topics = {query_id: {"title": query_text, "gen_cand_gpt4": [<gen_doc1>, <gen_doc2>, ...], "gen_cand_gpt35": [<gen_doc1>, <gen_doc2>, ...]}}
     """
+    print('test')
     for key in tqdm(topics):
         query = topics[key]['title']
         message = utils.PromptTemplate.get_prefix_prompt_pseudo_doc_zs(query)
@@ -76,7 +77,7 @@ def generate_pseudo_references(language_model_name: str, topics: Dict[str, Dict[
             gen_key = f'gen_cand_{language_model_name}'
             topics[key].setdefault(gen_key, [])
             for _ in range(generated_document_num):
-                output = language_model.get_response(message)
+                output = model.get_response(message)
                 topics[key][gen_key].append(output)
     return topics, f'gen_cand_4' if 'gpt' in language_model_name else gen_key
 
