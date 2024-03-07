@@ -1,15 +1,71 @@
-from transformers import BertTokenizer, BertModel
-import torch
-from sklearn.metrics.pairwise import cosine_similarity
 import PyPDF2
-from utils import extract_text_from_pdf
+from transformers import BertTokenizer, BertModel
 
 # Load pre-trained BERT model and tokenizer
 model_name = 'bert-large-cased-whole-word-masking'
 tokenizer = BertTokenizer.from_pretrained(model_name)
 model = BertModel.from_pretrained(model_name)
 
-def extract_relevant_pages_embeddings(pdf_path, query, k=2):
+def extract_text_from_pdf(pdf_path):
+    '''Takes a pdf file path and splits it into a list of strings where each string is less than 512 tokens
+    input: pdf file path
+    
+    output: 
+    text_list: list of strings representing text from a page or half page
+    page_num_list: list of corresponding page numbers which match to text_list 1 to 1
+
+    '''
+    text_list = []
+    page_num_list = []
+    # Open the PDF
+    with open(pdf_path, 'rb') as pdf_file:
+        # Create a PDF reader object
+        pdf_reader = PyPDF2.PdfFileReader(pdf_file)
+        # Iterate through each page
+        for page_num in range(pdf_reader.numPages):
+            # Get the page
+            page = pdf_reader.getPage(page_num)
+            # Extract text from the page
+            text = page.extractText()
+
+            #tokenize the text on the page
+            text_tokens = tokenizer.encode_plus(text, add_special_tokens=True, return_tensors="pt")
+            input_ids = text_tokens['input_ids']
+            tokens = input_ids.size(1)
+
+            if tokens >= 512:
+                text_list.append(text[:int(len(text)/2)])
+                page_num_list.append(page_num + 1)
+
+                text_list.append(text[int(len(text)/2):])
+                page_num_list.append(page_num + 1)
+            else: 
+                text_list.append(text)
+                page_num_list.append(page_num + 1) 
+
+    return text_list, page_num_list
+
+def preprocess(text):
+    """Takes a string and tokenizes them based on white spaces
+    
+    inputs:
+    text: a string
+    
+    outputs: 
+    tokens: list of strings"""
+    # Tokenize the text
+    tokens = text.lower().split()
+    # You can add additional preprocessing steps like removing stop words, stemming, lemmatization, etc.
+    return tokens
+
+
+def rerank(dictionary, query):
+    #create a list of pages and text
+    pages = []
+    text = []
+
+    for key, value in dictionary:
+
     #create a dict of page number to str 
     dictionary = {}
 
@@ -71,24 +127,3 @@ def extract_relevant_pages_embeddings(pdf_path, query, k=2):
         dictionary[page] = doc_dict
 
     return dictionary
-
-if __name__ == "__main__":
-    dictionary = extract_relevant_pages_embeddings('Data/Lakers_Specification.pdf', "What is the steel made out of for framing?", 6)
-    import json
-
-
-    with open('embeddings.json', 'w') as f:
-        json.dump(dictionary, f)
-
-    print(dictionary)
-
-
-
-
-
-
-        
-
-
-    
-

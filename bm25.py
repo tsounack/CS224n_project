@@ -1,31 +1,10 @@
 from rank_bm25 import BM25Okapi
 import PyPDF2
-
-def preprocess(text):
-    # Tokenize the text
-    tokens = text.lower().split()
-    # You can add additional preprocessing steps like removing stop words, stemming, lemmatization, etc.
-    return tokens
-
-def extract_text_from_pdf(pdf_path):
-    text_list = []
-    # Open the PDF
-    with open(pdf_path, 'rb') as pdf_file:
-        # Create a PDF reader object
-        pdf_reader = PyPDF2.PdfFileReader(pdf_file)
-        # Iterate through each page
-        for page_num in range(pdf_reader.numPages):
-            # Get the page
-            page = pdf_reader.getPage(page_num)
-            # Extract text from the page
-            text = page.extractText()
-            # Append the text to the list
-            text_list.append(text)
-    return text_list
+from utils import extract_text_from_pdf, preprocess
 
 def bm25_obj(pdf_path):
     #preprocess the pdf into a list of documents 
-    documents = extract_text_from_pdf(pdf_path)
+    documents, _ = extract_text_from_pdf(pdf_path)
 
     # Preprocess the documents
     tokenized_docs = [preprocess(doc) for doc in documents]
@@ -42,7 +21,7 @@ def extract_relevant_pages_bm25(bm25, pdf_path, query, k=2):
     dictionary = {}
 
     #preprocess the pdf into a list of documents 
-    documents = extract_text_from_pdf(pdf_path)
+    documents, pages = extract_text_from_pdf(pdf_path)
 
     # Preprocess the query
     query_tokens = preprocess(query)
@@ -51,7 +30,7 @@ def extract_relevant_pages_bm25(bm25, pdf_path, query, k=2):
     scores = bm25.get_scores(query_tokens)
 
     # Combine the scores with document indices
-    results = list(zip(range(len(documents)), scores))
+    results = list(zip(pages, scores))
 
     # Sort the results by BM25 score in descending order
     results.sort(key=lambda x: x[1], reverse=True)
@@ -62,7 +41,7 @@ def extract_relevant_pages_bm25(bm25, pdf_path, query, k=2):
         doc_dict = {}
         doc_dict['score'] = score
         doc_dict['text'] = documents[idx]
-        dictionary[idx + 1] = doc_dict
+        dictionary[idx] = doc_dict
     return dictionary
 
 if __name__ == "__main__":
