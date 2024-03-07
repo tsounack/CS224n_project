@@ -90,7 +90,8 @@ def write_eval_file(rank_results, file):
     with open(file, 'w') as f:
         for i in range(len(rank_results)):
             rank = 1
-            hits = rank_results[i]['hits']
+            print(rank_results)
+            hits = rank_results['hits'][i]
             for hit in hits:
                 f.write(f"{hit['qid']} Q0 {hit['docid']} {rank} {hit['score']} rank\n")
                 rank += 1

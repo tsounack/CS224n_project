@@ -128,6 +128,8 @@ def run_retriever(topics, searcher, gen_key, qrels=None, k=100, qid=None, use_en
     if isinstance(topics, str):
         topics = {qid: {'title': topics}} if qid else {'single_query': {'title': topics}}
 
+        print(topics)
+
     for index, (qid, topic) in enumerate(topics.items()):
         if qrels is None or qid in qrels:
             query = topic['enhanced_query'] if use_enhanced_query and 'enhanced_query' in topic else topic['title']

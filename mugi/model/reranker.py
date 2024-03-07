@@ -28,7 +28,7 @@ def mean_pooling(last_hidden_states: torch.Tensor, attention_mask: torch.Tensor)
 class Reranker:
     def __init__(self, model_name, mode):
         self.model_name = model_name 
-        self.model = AutoModel.from_pretrained(model_name).to("cuda")
+        self.model = AutoModel.from_pretrained(model_name).to("mps")
         self.model.eval()
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.mode = mode
@@ -53,7 +53,7 @@ class Reranker:
                 padding=True,
                 return_attention_mask=True,
                 return_tensors="pt",
-            ).to("cuda")
+            ).to("mps")
             with torch.no_grad():
                 outputs = self.model(**batch_dict)
                 embeddings = last_token_pool(
@@ -62,7 +62,7 @@ class Reranker:
                 embeddings = F.normalize(embeddings, p=2, dim=1)
             
         else:
-            input_tokens = self.tokenizer(input_texts, padding=True, truncation=True, return_tensors='pt').to('cuda')
+            input_tokens = self.tokenizer(input_texts, padding=True, truncation=True, return_tensors='pt').to("mps")
             with torch.no_grad():
                 outputs = self.model(**input_tokens)
                 if "bge-large-en-v1.5" in self.model_name:
