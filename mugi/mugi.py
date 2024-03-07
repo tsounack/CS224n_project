@@ -8,9 +8,18 @@ import argparse
 import logging
 from model import get_language_model, get_reranker
 import benchmark
-
+from dotenv import load_dotenv
+import os
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
 language_model = None
+# Load variables from .env file into environment
+load_dotenv('.env')
+from openai import OpenAI
+# Access the environment variable
+openai_key = os.getenv("OPENAI_API_KEY")
+global client
+# openai_key = os.environ.get('OPENAI_KEY')
+client = OpenAI(api_key=openai_key)
 
 def ensure_model_loaded(model_name):
     global language_model  
@@ -61,8 +70,9 @@ def generate_pseudo_references(language_model_name: str, topics: Dict[str, Dict[
         if 'gpt' in language_model_name:
             global client
             utils.initialize_client()
+            print(client)
             models = [
-                ('gpt-4-1106-preview', generated_document_num),
+                # ('gpt-4-1106-preview', generated_document_num),
                 ('gpt-3.5-turbo-1106', min(3, generated_document_num))
             ]
             
