@@ -1,5 +1,7 @@
 import PyPDF2
 from transformers import BertTokenizer, BertModel
+import torch
+from sklearn.metrics.pairwise import cosine_similarity
 
 # Load pre-trained BERT model and tokenizer
 model_name = 'bert-large-cased-whole-word-masking'
@@ -37,6 +39,9 @@ def extract_text_from_pdf(pdf_path):
                 text_list.append(text[:int(len(text)/2)])
                 page_num_list.append(page_num + 1)
 
+                text_list.append(text[int(len(text)/4):int(3*len(text)/4)])
+                page_num_list.append(page_num + 1)
+
                 text_list.append(text[int(len(text)/2):])
                 page_num_list.append(page_num + 1)
             else: 
@@ -62,15 +67,11 @@ def preprocess(text):
 def rerank(dictionary, query):
     #create a list of pages and text
     pages = []
-    text = []
+    documents = []
 
-    for key, value in dictionary:
-
-    #create a dict of page number to str 
-    dictionary = {}
-
-    #preprocess the pdf into a list of documents 
-    documents, pages = extract_text_from_pdf(pdf_path)
+    for key, value in dictionary.items():
+        pages.append(key)
+        documents.append(value['text'])
 
     # Tokenize input query
     query_tokens = tokenizer.encode_plus(query, add_special_tokens=True, return_tensors="pt")
@@ -86,27 +87,15 @@ def rerank(dictionary, query):
     for index, doc in enumerate(documents):
         text_tokens = tokenizer.encode_plus(doc, add_special_tokens=True, return_tensors="pt")
         input_ids = text_tokens['input_ids']
+
         tokens = input_ids.size(1)
-        if tokens >= 512:
-            #break the page in half and then feed both halfs into mean 
-            text_tokens1 = tokenizer.encode_plus(doc[:int(len(doc)/2)], add_special_tokens=True, return_tensors="pt")
-            text_tokens2 = tokenizer.encode_plus(doc[int(len(doc)/2):], add_special_tokens=True, return_tensors="pt")
-            # Obtain embeddings for text
-            with torch.no_grad():
-                text_outputs1 = model(**text_tokens1)
-                text_outputs2 = model(**text_tokens2)
-            text_hidden_states1 = text_outputs1.last_hidden_state
-            text_hidden_states2 = text_outputs2.last_hidden_state
-            combined_hidden_states = torch.cat([text_hidden_states1, text_hidden_states2], dim=1)
-            text_pooled_embedding = torch.mean(combined_hidden_states, dim=1)
-        else: 
-            # Obtain embeddings for text
-            with torch.no_grad():
-                text_outputs = model(**text_tokens)
-            text_hidden_states = text_outputs.last_hidden_state
-            text_pooled_embedding = torch.mean(text_hidden_states, dim=1)
+        # Obtain embeddings for text
+        with torch.no_grad():
+            text_outputs = model(**text_tokens)
+        text_hidden_states = text_outputs.last_hidden_state
+        text_pooled_embedding = torch.mean(text_hidden_states, dim=1)
         embedding_list.append(text_pooled_embedding)
-        print('Analyzed page ', index+1)
+        print('Analyzed page ', pages[index])
         
     similarities = []
     for embedding in embedding_list:
@@ -120,10 +109,20 @@ def rerank(dictionary, query):
     # Sort based on the values in list 'a'
     sorted_combined = sorted(combined, key=lambda x: x[0], reverse=True)
 
-    for sim, page, doc in sorted_combined[:k]:
+    for sim, page, doc in sorted_combined:
         doc_dict={}
         doc_dict['score'] = str(sim)
         doc_dict['text'] = doc
         dictionary[page] = doc_dict
 
     return dictionary
+
+if __name__ == "__main__":
+    import json
+    # Open the file
+    with open('embeddings.json', 'r') as f:
+        # Load the JSON data from the file into a dictionary
+        data = json.load(f)
+
+    dic = rerank(data, "What is the steel made out of for framing?")
+    print(dic)
