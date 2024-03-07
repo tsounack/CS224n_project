@@ -50,7 +50,7 @@ def extract_relevant_pages_embeddings(pdf_path, query, k=2):
             text_hidden_states = text_outputs.last_hidden_state
             text_pooled_embedding = torch.mean(text_hidden_states, dim=1)
         embedding_list.append(text_pooled_embedding)
-        print('Analyzed page ', index+1)
+        print('Analyzed page ', pages[index])
         
     similarities = []
     for embedding in embedding_list:
@@ -63,24 +63,17 @@ def extract_relevant_pages_embeddings(pdf_path, query, k=2):
 
     # Sort based on the values in list 'a'
     sorted_combined = sorted(combined, key=lambda x: x[0], reverse=True)
+    # Get the first k tuples from results
+    first_k_results = sorted_combined[:k]
 
-    for sim, page, doc in sorted_combined[:k]:
-        doc_dict={}
-        doc_dict['score'] = str(sim)
-        doc_dict['text'] = doc
-        dictionary[page] = doc_dict
+    # Unzip the tuples
+    out_scores, out_pages, out_docs = zip(*first_k_results)
 
-    return dictionary
+    return list(out_docs), list(out_pages)
 
 if __name__ == "__main__":
-    dictionary = extract_relevant_pages_embeddings('Data/Lakers_Specification.pdf', "What is the steel made out of for framing?", 6)
-    import json
-
-
-    with open('embeddings.json', 'w') as f:
-        json.dump(dictionary, f)
-
-    print(dictionary)
+    out_pages, out_docs = extract_relevant_pages_embeddings('Data/Lakers_Specification_TEST.pdf', "What is the steel made out of for framing?", 6)
+    print(out_pages, out_docs)
 
 
 

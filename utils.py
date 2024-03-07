@@ -64,65 +64,65 @@ def preprocess(text):
     return tokens
 
 
-def rerank(dictionary, query):
-    #create a list of pages and text
-    pages = []
-    documents = []
+# def rerank(dictionary, query):
+#     #create a list of pages and text
+#     pages = []
+#     documents = []
 
-    for key, value in dictionary.items():
-        pages.append(key)
-        documents.append(value['text'])
+#     for key, value in dictionary.items():
+#         pages.append(key)
+#         documents.append(value['text'])
 
-    # Tokenize input query
-    query_tokens = tokenizer.encode_plus(query, add_special_tokens=True, return_tensors="pt")
+#     # Tokenize input query
+#     query_tokens = tokenizer.encode_plus(query, add_special_tokens=True, return_tensors="pt")
 
-    # Obtain embeddings for query
-    with torch.no_grad():
-        query_outputs = model(**query_tokens)
-    query_hidden_states = query_outputs.last_hidden_state
-    query_pooled_embedding = torch.mean(query_hidden_states, dim=1)
+#     # Obtain embeddings for query
+#     with torch.no_grad():
+#         query_outputs = model(**query_tokens)
+#     query_hidden_states = query_outputs.last_hidden_state
+#     query_pooled_embedding = torch.mean(query_hidden_states, dim=1)
 
-    #iterate through the documents 
-    embedding_list = []
-    for index, doc in enumerate(documents):
-        text_tokens = tokenizer.encode_plus(doc, add_special_tokens=True, return_tensors="pt")
-        input_ids = text_tokens['input_ids']
+#     #iterate through the documents 
+#     embedding_list = []
+#     for index, doc in enumerate(documents):
+#         text_tokens = tokenizer.encode_plus(doc, add_special_tokens=True, return_tensors="pt")
+#         input_ids = text_tokens['input_ids']
 
-        tokens = input_ids.size(1)
-        # Obtain embeddings for text
-        with torch.no_grad():
-            text_outputs = model(**text_tokens)
-        text_hidden_states = text_outputs.last_hidden_state
-        text_pooled_embedding = torch.mean(text_hidden_states, dim=1)
-        embedding_list.append(text_pooled_embedding)
-        print('Analyzed page ', pages[index])
+#         tokens = input_ids.size(1)
+#         # Obtain embeddings for text
+#         with torch.no_grad():
+#             text_outputs = model(**text_tokens)
+#         text_hidden_states = text_outputs.last_hidden_state
+#         text_pooled_embedding = torch.mean(text_hidden_states, dim=1)
+#         embedding_list.append(text_pooled_embedding)
+#         print('Analyzed page ', pages[index])
         
-    similarities = []
-    for embedding in embedding_list:
-        # Compute cosine similarity between text and query embeddings
-        similarity_score = cosine_similarity(embedding.numpy(), query_pooled_embedding.numpy())[0][0]
-        similarities.append(similarity_score)
+#     similarities = []
+#     for embedding in embedding_list:
+#         # Compute cosine similarity between text and query embeddings
+#         similarity_score = cosine_similarity(embedding.numpy(), query_pooled_embedding.numpy())[0][0]
+#         similarities.append(similarity_score)
     
-    #zip both list of documents and similarities togtether
-    combined = list(zip(similarities, pages, documents))
+#     #zip both list of documents and similarities togtether
+#     combined = list(zip(similarities, pages, documents))
 
-    # Sort based on the values in list 'a'
-    sorted_combined = sorted(combined, key=lambda x: x[0], reverse=True)
+#     # Sort based on the values in list 'a'
+#     sorted_combined = sorted(combined, key=lambda x: x[0], reverse=True)
 
-    for sim, page, doc in sorted_combined:
-        doc_dict={}
-        doc_dict['score'] = str(sim)
-        doc_dict['text'] = doc
-        dictionary[page] = doc_dict
+#     for sim, page, doc in sorted_combined:
+#         doc_dict={}
+#         doc_dict['score'] = str(sim)
+#         doc_dict['text'] = doc
+#         dictionary[page] = doc_dict
 
-    return dictionary
+#     return dictionary
 
-if __name__ == "__main__":
-    import json
-    # Open the file
-    with open('embeddings.json', 'r') as f:
-        # Load the JSON data from the file into a dictionary
-        data = json.load(f)
+# if __name__ == "__main__":
+#     import json
+#     # Open the file
+#     with open('embeddings.json', 'r') as f:
+#         # Load the JSON data from the file into a dictionary
+#         data = json.load(f)
 
-    dic = rerank(data, "What is the steel made out of for framing?")
-    print(dic)
+#     dic = rerank(data, "What is the steel made out of for framing?")
+#     print(dic)

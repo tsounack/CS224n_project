@@ -30,22 +30,21 @@ def extract_relevant_pages_bm25(bm25, pdf_path, query, k=2):
     scores = bm25.get_scores(query_tokens)
 
     # Combine the scores with document indices
-    results = list(zip(pages, scores))
+    results = list(zip(scores, pages, documents))
 
     # Sort the results by BM25 score in descending order
-    results.sort(key=lambda x: x[1], reverse=True)
+    results.sort(key=lambda x: x[0], reverse=True)
 
-    # Print the top k results
-    for idx, score in results[:k]:
-        # print(f"Document {idx + 1}: {documents[idx]} - BM25 Score: {score}")
-        doc_dict = {}
-        doc_dict['score'] = score
-        doc_dict['text'] = documents[idx]
-        dictionary[idx] = doc_dict
-    return dictionary
+    # Get the first k tuples from results
+    first_k_results = results[:k]
+
+    # Unzip the tuples
+    out_scores, out_pages, out_docs = zip(*first_k_results)
+
+    return list(out_docs), list(out_pages)
 
 if __name__ == "__main__":
     bm25 = bm25_obj('Data/Lakers_Specification.pdf')
-    dictionary = extract_relevant_pages_bm25(bm25, 'Data/Lakers_Specification.pdf', "what is the address of the architect?", 2)
-    print(dictionary)
+    output_docs, output_pages = extract_relevant_pages_bm25(bm25, 'Data/Lakers_Specification.pdf', "what is the address of the architect?", 6)
+    print(output_docs, output_pages)
 

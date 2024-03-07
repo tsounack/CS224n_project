@@ -4,6 +4,7 @@ from openai import OpenAI
 from mugi.mugi import generate_pseudo_references
 from rank_bm25 import BM25Okapi
 from utils import extract_text_from_pdf, preprocess
+from typing import List
 
 class MuGI:
     """
@@ -58,40 +59,36 @@ class MuGI:
             total_query (str): The total query string.
             k (int, optional): The number of top-ranked entries to return. Defaults to 2.
 
-        Returns:
-            dict: A dictionary mapping page numbers to the corresponding ranked results.
+       Returns:
+            out_docs (List[str]): reranked sorted list of strings representing text
+            out_pages (List[str]): corresponding pages to the text in out_docs
         """
         page_to_results = {}
         entries, entry_idx = extract_text_from_pdf(pdf_path)
         query_tokens = preprocess(total_query)
         bm25 = self._generate_bm25_obj(pdf_path)
         ranking = bm25.get_scores(query_tokens)
-        results = list(zip(entry_idx, ranking))
-        results.sort(key=lambda x: x[1], reverse=True)
-        for idx, score in results[:k]:
-            page_to_results[idx] = {
-                'score': score,
-                'text': entries[idx]
-            }
-        return page_to_results
+        results = list(zip(ranking, entry_idx, entries))
+        results.sort(key=lambda x: x[0], reverse=True)
+        first_k_results = results[:k]
+        out_scores, out_pages, out_docs = zip(*first_k_results)
+        return list(out_docs), list(out_pages)
     
-    def rerank_entries(self, total_query: str, page_to_results: dict, model: object, tokenizer: object):
+    def rerank_entries(self, total_query: str, entries: List[str], entry_idx: List[str], model: object, tokenizer: object):
             """
             Reranks the entries in the given page_to_results dictionary based on their similarity to the total_query.
             
             Args:
                 total_query (str): The total query string.
-                page_to_results (dict): A dictionary mapping page numbers to result dictionaries.
+                entries (List[str]): A list of strings representing the top K text 
+                entry_idx (List[str]): A list of pages representing the respective pages corresponding to entries
                 model (object): The model used for embedding the queries and entries.
                 tokenizer (object): The tokenizer used for tokenizing the queries and entries.
             
             Returns:
-                dict: The updated page_to_results dictionary with reranked entries.
+                out_docs (List[str]): reranked sorted list of strings representing text
+                out_pages (List[str]): corresponding pages to the text in out_docs
             """
-            entries, entry_idx = [], []
-            for page, result in page_to_results.items():
-                entries.append(result['text'])
-                entry_idx.append(page)
             tokenized_query = tokenizer.encode_plus(total_query, add_special_tokens=True, return_tensors="pt")
             with torch.no_grad():
                 embedded_query = model(**tokenized_query)
@@ -110,12 +107,9 @@ class MuGI:
                 similarity_score = torch.nn.functional.cosine_similarity(embedding, query_pooled_embedding)
                 similarity_scores.append(similarity_score.item())
             sorted_ranked = sorted(zip(similarity_scores, entry_idx, entries), key=lambda x: x[0], reverse=True)
-            for score, page, text in sorted_ranked:
-                page_to_results[page] = {
-                    'score': score,
-                    'text': text
-                }
-            return page_to_results
+            first_k_results = sorted_ranked
+            out_scores, out_pages, out_docs = zip(*first_k_results)
+            return list(out_docs), list(out_pages)
 
     def _generate_bm25_obj(self, pdf_path: str):
         """
