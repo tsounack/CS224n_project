@@ -77,7 +77,7 @@ def generate_pseudo_references(language_model_name: str, topics: Dict[str, Dict[
             gen_key = f'gen_cand_{language_model_name}'
             topics[key].setdefault(gen_key, [])
             for _ in range(generated_document_num):
-                output = model.get_response(message)
+                output = language_model.get_response(message)
                 topics[key][gen_key].append(output)
     return topics, f'gen_cand_4' if 'gpt' in language_model_name else gen_key
 

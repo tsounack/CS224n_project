@@ -1,5 +1,5 @@
 from rank_bm25 import BM25Okapi
-import fitz
+import PyPDF2
 
 def preprocess(text):
     # Tokenize the text
@@ -10,22 +10,20 @@ def preprocess(text):
 def extract_text_from_pdf(pdf_path):
     text_list = []
     # Open the PDF
-    with fitz.open(pdf_path) as pdf_document:
+    with open(pdf_path, 'rb') as pdf_file:
+        # Create a PDF reader object
+        pdf_reader = PyPDF2.PdfFileReader(pdf_file)
         # Iterate through each page
-        for page_num in range(len(pdf_document)):
+        for page_num in range(pdf_reader.numPages):
             # Get the page
-            page = pdf_document.load_page(page_num)
+            page = pdf_reader.getPage(page_num)
             # Extract text from the page
-            text = page.get_text()
+            text = page.extractText()
             # Append the text to the list
             text_list.append(text)
     return text_list
 
-
-def extract_relevant_pages_bm25(pdf_path, query, k=2): 
-    #create a dict of page number to str 
-    dictionary = {}
-
+def bm25_obj(pdf_path):
     #preprocess the pdf into a list of documents 
     documents = extract_text_from_pdf(pdf_path)
 
@@ -34,6 +32,17 @@ def extract_relevant_pages_bm25(pdf_path, query, k=2):
 
     # Create BM25Okapi object
     bm25 = BM25Okapi(tokenized_docs)
+
+    return bm25
+
+
+
+def extract_relevant_pages_bm25(bm25, pdf_path, query, k=2): 
+    #create a dict of page number to str 
+    dictionary = {}
+
+    #preprocess the pdf into a list of documents 
+    documents = extract_text_from_pdf(pdf_path)
 
     # Preprocess the query
     query_tokens = preprocess(query)
@@ -49,13 +58,15 @@ def extract_relevant_pages_bm25(pdf_path, query, k=2):
 
     # Print the top k results
     for idx, score in results[:k]:
-        print(f"Document {idx + 1}: {documents[idx]} - BM25 Score: {score}")
+        # print(f"Document {idx + 1}: {documents[idx]} - BM25 Score: {score}")
         doc_dict = {}
         doc_dict['score'] = score
         doc_dict['text'] = documents[idx]
         dictionary[idx + 1] = doc_dict
-    return doc_dict
+    return dictionary
 
 if __name__ == "__main__":
-    dictionary = extract_relevant_pages_bm25('Data/Lakers_Specification.pdf', "what is the address of the architect?", 2)
+    bm25 = bm25_obj('Data/Lakers_Specification.pdf')
+    dictionary = extract_relevant_pages_bm25(bm25, 'Data/Lakers_Specification.pdf', "what is the address of the architect?", 2)
+    print(dictionary)
 

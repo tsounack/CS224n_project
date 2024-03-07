@@ -22,7 +22,7 @@ def extract_text_from_pdf(pdf_path, page_number, token, text_len):
 
 # Example usage
 pdf_path = "Data/Lakers_Specification.pdf"
-page_number = 282
+page_number = 264
 tokenizer = BertTokenizer.from_pretrained('bert-large-cased-whole-word-masking')
 extracted_text, tokens = extract_text_from_pdf(pdf_path, page_number, tokenizer, 2000)
 print(extracted_text, tokens)

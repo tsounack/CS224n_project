@@ -1,7 +1,7 @@
 from transformers import BertTokenizer, BertModel
 import torch
 from sklearn.metrics.pairwise import cosine_similarity
-import fitz
+import PyPDF2
 
 # Load pre-trained BERT model and tokenizer
 model_name = 'bert-large-cased-whole-word-masking'
@@ -11,16 +11,19 @@ model = BertModel.from_pretrained(model_name)
 def extract_text_from_pdf(pdf_path):
     text_list = []
     # Open the PDF
-    with fitz.open(pdf_path) as pdf_document:
+    with open(pdf_path, 'rb') as pdf_file:
+        # Create a PDF reader object
+        pdf_reader = PyPDF2.PdfFileReader(pdf_file)
         # Iterate through each page
-        for page_num in range(len(pdf_document)):
+        for page_num in range(pdf_reader.numPages):
             # Get the page
-            page = pdf_document.load_page(page_num)
+            page = pdf_reader.getPage(page_num)
             # Extract text from the page
-            text = page.get_text()
+            text = page.extractText()
             # Append the text to the list
             text_list.append(text)
     return text_list
+
 
 def extract_relevant_pages_embeddings(pdf_path, query, k=2):
     #create a dict of page number to str 
