@@ -1,0 +1,282 @@
+Question,Paragraph,Page,answer,bm25_k=1_pages,BERT Answer
+What type of welding electrodes are used for reinforcing bars. ,"Back-Check No. 2 - ASI 009 
+January 15, 2016 
+Lakers Practice Facility 
+Los Angeles, CA 
+RA Project No. 2014-015 
+ 
+ 
+CONCRETE REINFORCEMENT 
+ 032000 - 3 
+ 
+B. 
+Electrode storage: Comply with the combined recommendations of AWS and the electrode 
+manufacturer for storage of electrodes. Do not use electrodes that have been wetted. 
+C. 
+Delivery: Deliver reinforcement to the site bundled, tagged and marked; handle to prevent 
+damage to material. Use metal tags indicating size, length and other markings shown on place-
+ment drawings. Maintain tags after bundles are broken. 
+PART 2 - PRODUCTS 
+2.1 
+MATERIALS 
+A. 
+Reinforcing steel: 
+Use ASTM A 615, Grade 60 for gravity elements. For welding, conform 
+to specified carbon equivalent or use bars conforming to ASTM A 706. 
+B. 
+Reinforcing mesh: ASTM A 185. Provide welded wire fabric in flat sheets, not rolls. 
+C. 
+Welding electrodes for Reinforcing Bars: AWS A5.1 E80XX Series, low hydrogen, having a 
+minimum yield point of 80,000 psi. 
+D. 
+Tie wire: ASTM A 82, 16 gage (minimum) annealed steel wire. 
+E. 
+Supports for reinforcement: Bolsters, chairs, spacers, and other devices for spacing, supporting, 
+and fastening reinforcing bars and welded wire fabric in place. Use wire-bar-type supports 
+complying with CRSI specifications. 
+1. 
+For slabs-on-grade, use supports with sand plates or horizontal runners where base 
+material will not support chair legs, or pre-cast concrete block chairs with embedded wire 
+ties. 
+2. 
+For exposed-to-view concrete surfaces, where legs of supports are in contact with forms, 
+provide supports with legs that are plastic protected (CRSI, Class 1) or stainless steel 
+protected (CRSI, Class 2). 
+3. 
+Over waterproof membranes and vapor barriers, use pre-cast concrete chairs to prevent 
+puncturing of membrane. 
+2.2 
+FABRICATION 
+A. 
+General: Except as modified by the Drawings and the Specifications, comply with Chapter 7 of 
+CRSI Manual of Standard Practice for fabrication of reinforcing steel. Exposed Sealing 
+Materials: All sealing materials exposed at entrance and storefront perimeter joints in contact 
+with adjacent cladding materials: 2 component silicone, refer to Division 7 Section ""Joint 
+Sealants"". 
+B. 
+Bending and forming: 
+1. 
+For slabs-on-grade, use supports with sand plates or horizontal runners where base 
+material will not support chair legs, or pre-cast concrete block chairs with embedded wire 
+ties. 
+2. 
+Heating reinforcement for bending is prohibited. Do not install bars with unscheduled 
+kinks or bends. 
+3. 
+Bars larger than #4 shall not be bent once cast in concrete or masonry. ",131,"131AWS A5.1 E80XX Series, low hydrogen, having a minimum yield point of 80,000 psi",131, aws a5 . 1 e80xx series
+What software is used for the BIM Model?,"Back-Check No. 2 - ASI 009 
+January 15, 2016 
+Lakers Practice Facility 
+Los Angeles, CA 
+RA Project No. 2014-015 
+ 
+ 
+BUILDING INFORMATION MODELING (BIM) PROJECT REQUIREMENTS 
+ 013700 - 2 
+ 
+2.2 
+BUILDING INFORMATION MODELING / MANAGEMENT – GENERAL REQUIREMENTS 
+A. 
+A Coordination model produced using Building Information Modeling software is to be 
+developed by all BIM participants.  This model will be utilized to establish field installation 
+sequence, resolve trade coordination issues prior to installation, and to make the most efficient 
+use of installation space without sacrifice to system performance for mechanical, electrical, 
+structural and assigned architectural systems.  This method will use multiple BIM design review 
+software platforms as a means of documenting, identifying and resolving inter-relationships and 
+possible interferences between all trades' Work and the architectural features as using the 
+model to schedule, provide quantity takeoffs and serve as the as-built of the facility. 
+B. 
+Communication is a critical element to the success of this coordination process.  Each 
+Subcontractor, the Design Team Members, the Owner, and General Contractor/CM must be in 
+constant communication to keep the process moving forward in a timely manner and per the 
+sign-off schedule.  Constant collaboration is expected of all team participants and each 
+participant should be proactive in identification and resolution of the design engineering and 
+model interferences.   
+C. 
+General Contractor/CM will facilitate and lead the BIM Process.  General Contractor/CM will be 
+the final authority on model issues.  It is the responsibility of all BIM participants to resolve 
+discrepancies pertaining to their own model.  Each Subcontractor shall purchase at its own 
+cost licenses of Navisworks 2014 including any maintenance and software updates during the 
+course of the Project. 
+D. 
+All BIM participants are required to attend all model review meetings, are expected to",30,Navisworks 2014,30, building information modeling
+What is the purpose of the weekly BIM Development Meetings?,"H. Typical utility corridors and above ceiling space zones for each trade will be established by the 
+group at the beginning of the process.  These zones will be adjusted through the coordination 
+process to meet actual installation req uirements during system development.   
+I. All participants are required to identify those submittals required for accurate detailing of the 
+coordination model (such as equipment, light fixtures, etc.) and are to make those submittals a 
+priority in obtaining f inal approval so the specific information can be incorporated into the 
+modeling process.   
+J. All BIM participants are required to produce a BIM with all information typically included on their 
+shop drawings. BIM may not replace the standard submittal process  and all contractors will be 
+required to produce 2D shop drawings from their BIM as requested.   
+K. At the Weekly BIM Development  Meeting:  
+1. The purpose of the Weekly BIM Development Meeting is the review and resolution of 
+items that are found as models are de veloped in conjunction with the project schedule.  
+The meetings will focus on clashes that cannot be resolved by internal collaboration, 
+additional information that needs to be placed with model objects to support scheduling 
+and estimating goals, and / or review of design changes to be incorporated. General 
+Contractor/CM will facilitate the meeting and will make final decisions on clash resolution 
+that are the least impact to the project as a whole.  WEEKLY BIM DEVELOPMENT 
+MEETINGS WILL NOT BE USED TO RESOL VE INDIVIDUAL SUBCONTRACTOR’S 
+WORK.  If a Subcontractor does not post a clash -free system of its own work, that 
+Subcontractor will be considered unprepared for the",31,The review and resolution of items that are found as models are developed in conjuction with the project schedule. ,31, review and resolution of items that are found as models are de veloped in conjunction with the project schedule
+Whose responsibility is it to perform tests and inspections not explicitly assigned to the owner?," Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
+ QUALITY REQUIREMENTS  014000 - 6  B. Tests and inspections not explicitly assigned to Owner are Contractor's responsibility.  Unless 
+otherwise indicated, provide quality -control services specified and those required by Authorities  
+Having Jurisdiction (AHJ).  Perform quality -control services required of Contractor by 
+Authorities Having Jurisdiction (AHJ), whether specified or not.  
+1. Where services are indicated as Contractor's responsibility, engage a qualified testing 
+agency to perfo rm these quality -control services.  
+a. Contractor shall not employ same entity engaged by Owner, unless agreed to in 
+writing by Owner.  
+2. Notify testing agencies at least 24 hours in advance of time when Work that requires 
+testing or inspecting will be performed.  
+3. Where quality -control services are indicated as Contractor's responsibility, submit a 
+certified written report, in duplicate, of each quality -control service.  
+4. Testing and inspecting requested by Contractor and not required by the Contract 
+Documents are Co ntractor's responsibility.  
+5. Submit additional copies of each written report directly to Authorities Having Jurisdiction 
+(AHJ), when they so direct.  
+C. Manufacturer's Field Services:  Where indicated, engage a factory -authorized service 
+representative to inspec t field -assembled components and equipment installation, including 
+service connections.  Report results in writing as specified in Section 013300 ""Submittal 
+Procedures.""  
+D. Retesting/Reinspecting:  Regardless of whether original tests or inspections were Cont ractor's 
+responsibility, provide quality -control services, including retesting and reinspecting, for 
+construction that replaced Work that failed to comply with the Contract Documents.  
+E. Testing Agency Responsibilities:  Cooperate with Architect, and Contract or in performance of 
+duties.  Provide qualified",50,Contractors Responsibility. ,50, contractor
+How much advance notice should the contractor provide to testing agencies before performing work that requires testing or inspecting?," Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
+ QUALITY REQUIREMENTS  014000 - 6  B. Tests and inspections not explicitly assigned to Owner are Contractor's responsibility.  Unless 
+otherwise indicated, provide quality -control services specified and those required by Authorities  
+Having Jurisdiction (AHJ).  Perform quality -control services required of Contractor by 
+Authorities Having Jurisdiction (AHJ), whether specified or not.  
+1. Where services are indicated as Contractor's responsibility, engage a qualified testing 
+agency to perfo rm these quality -control services.  
+a. Contractor shall not employ same entity engaged by Owner, unless agreed to in 
+writing by Owner.  
+2. Notify testing agencies at least 24 hours in advance of time when Work that requires 
+testing or inspecting will be performed.  
+3. Where quality -control services are indicated as Contractor's responsibility, submit a 
+certified written report, in duplicate, of each quality -control service.  
+4. Testing and inspecting requested by Contractor and not required by the Contract 
+Documents are Co ntractor's responsibility.  
+5. Submit additional copies of each written report directly to Authorities Having Jurisdiction 
+(AHJ), when they so direct.  
+C. Manufacturer's Field Services:  Where indicated, engage a factory -authorized service 
+representative to inspec t field -assembled components and equipment installation, including 
+service connections.  Report results in writing as specified in Section 013300 ""Submittal 
+Procedures.""  
+D. Retesting/Reinspecting:  Regardless of whether original tests or inspections were Cont ractor's 
+responsibility, provide quality -control services, including retesting and reinspecting, for 
+construction that replaced Work that failed to comply with the Contract Documents.  
+E. Testing Agency Responsibilities:  Cooperate with Architect, and Contract or in performance of 
+duties.  Provide qualified",50,Notify testing agencies at least 24 hours in advance of time when Work that requires testing or inspecting will be performed.,50, 24 hours
+"If directed by the Authorities Having Jurisdiction (AHJ), where should the contractor submit additional copies of each written report?"," Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
+ QUALITY REQUIREMENTS  014000 - 6  B. Tests and inspections not explicitly assigned to Owner are Contractor's responsibility.  Unless 
+otherwise indicated, provide quality -control services specified and those required by Authorities  
+Having Jurisdiction (AHJ).  Perform quality -control services required of Contractor by 
+Authorities Having Jurisdiction (AHJ), whether specified or not.  
+1. Where services are indicated as Contractor's responsibility, engage a qualified testing 
+agency to perfo rm these quality -control services.  
+a. Contractor shall not employ same entity engaged by Owner, unless agreed to in 
+writing by Owner.  
+2. Notify testing agencies at least 24 hours in advance of time when Work that requires 
+testing or inspecting will be performed.  
+3. Where quality -control services are indicated as Contractor's responsibility, submit a 
+certified written report, in duplicate, of each quality -control service.  
+4. Testing and inspecting requested by Contractor and not required by the Contract 
+Documents are Co ntractor's responsibility.  
+5. Submit additional copies of each written report directly to Authorities Having Jurisdiction 
+(AHJ), when they so direct.  
+C. Manufacturer's Field Services:  Where indicated, engage a factory -authorized service 
+representative to inspec t field -assembled components and equipment installation, including 
+service connections.  Report results in writing as specified in Section 013300 ""Submittal 
+Procedures.""  
+D. Retesting/Reinspecting:  Regardless of whether original tests or inspections were Cont ractor's 
+responsibility, provide quality -control services, including retesting and reinspecting, for 
+construction that replaced Work that failed to comply with the Contract Documents.  
+E. Testing Agency Responsibilities:  Cooperate with Architect, and Contract or in performance of 
+duties.  Provide qualified",50,"Submit additional copies of each written report directly to Authorities Having Jurisdiction (AHJ), when they so direct.",50, [CLS]
+For Storm Water Pollution Prevention what documents should I reference?,"Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
+ TEMPORARY STORM WATER POLLUTION CONTROL  015723 - 1  SECTION 015723 – TEMPORARY STORM WATER POLLUTION CONTROL  
+PART 1 - GENERAL  
+1.1 SECTION INCLUDES  
+A. Installation of Storm  Water Pollution Prevention Plan (SWPPP) measures as per plans, 
+specifications and the project SWPPP document for the purpose of preventing the discharge of 
+pollutants from the construction site.  
+B. Compliance with local, state and federal regulations.  
+1.2 REFE RENCES  
+A. California Storm Water Best Management Practice Handbook for Construction Activity (BMP 
+Handbook)  
+B. Construction General Permit (CGP) Order No. 2009 -009-DWQ  
+1.3 SUBMITTAL REQUIREMENTS  
+A. Product Data: Provide product catalog cut sheets of all temporary and p ermanent equipment 
+and specialty items that will be provided to comply with the SWPPP, including items necessary 
+for storage, disposal and recycling.    
+B. Shop Drawings: Provide site plan indicating construction staging, storage, refuse areas and 
+vehicular r outing and parking areas.     
+PART 2 - PRODUCTS  
+2.1 MATERIALS  
+A. Use materials of a class, grade and type needed to meet the performance described in the BMP 
+Handbook and project SWPPP document.    
+PART 3 - EXECUTION  
+3.1 QUALIFIED SWPPP DEVELOPER (QSD)  
+A. The owner shall designate a Qual ified SWPPP Developer (QSD) having registrations, 
+certifications and appropriate experience as defined by the State of California Construction 
+General Permit (CGP) Order No. 2009 -009-DWQ to perform the following:",61,California Storm Water Best Management Practice Handbook for Construction Activity (BMP Handbook) and Construction General Permit (CGP) Order No. 2009-009-DWQ,61, [CLS]
+How should loose stockpiled construction materials that are not actively being used be managed to prevent water quality threats?,"Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
+ TEMPORARY STORM WATER POLLUTION CONTROL  015723 - 3  1. For projects designated as Risk Level 1 and above, implement good site management 
+(i.e., ""housekeeping"") measures for construction materials that could potentially be a 
+threat to water quality if discharged. At a minimum, the contracto r shall implement the 
+following good housekeeping measures:  
+a. Conduct an inventory of the products used and/or expected to be used and the 
+end products that are produced and/or expected to be produced.  This does not 
+include materials and equipment that are designed to be outdoors and exposed to 
+environmental conditions (i.e. poles, equipment pads, cabinets, conductors, 
+insulators, bricks, etc.).  
+b. Cover and berm loose stockpiled construction materials that are not actively being 
+used (i.e. soil, spoils, aggre gate, fly -ash, stucco, hydrated lime, etc.).  
+c. Store chemicals in watertight containers (with appropriate secondary containment 
+to prevent any spillage or leakage) or in a storage shed (completely enclosed).  
+d. Minimize exposure of construction materials to pr ecipitation.  This does not 
+include materials and equipment that are designed to be outdoors and exposed to 
+environmental conditions (i.e. poles, equipment pads, cabinets, conductors, 
+insulators, bricks, etc.).  
+e. Implement Best Management Practices to preven t the off -site tracking of loose 
+construction and landscape materials.  
+2. For projects designated as Risk Level 1 and above, implement good housekeeping 
+measures for waste management, which, at a minimum, shall consist of the following:  
+a. Prevent disposal of an y rinse or wash waters or materials on impervious or 
+pervious site surfaces or into the storm drain system.  
+b. Ensure the containment of sanitation facilities (e.g., portable toilets) to prevent 
+discharges of pollutants to the storm water drainage system or",63,Cover and berm loose stockpiled construction materials that are not actively being used,63,
+For wood-preservative-treated materials what is the preservative treatment by pressure process?,"Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
+ ROUGH CARPENTRY  061000 - 4  D. Engineered Wood Products:  
+  
+1. Determine formaldehyde concentrations in air from wood products under test conditions 
+of temperature and relative humidity in accordance with ASTM D 6007 or ASTM E 1333.  
+2. Determine Volatile Organic Compounds (VOC), excluding formaldehyde, emitted from 
+manufactured wood -based panels in accordance with ASTM D 6330.  
+1.6 DELIVERY, STORAGE, AND HANDLING  
+A. Stack lumber flat with spacers between each bundle to provide air circulation.  Provide for air 
+circulation  around stacks and under coverings.  
+PART 2 - PRODUCTS  
+2.1 WOOD PRODUCTS, GENERAL  
+A. Lumber:  DOC PS 20 and applicable rules of grading agencies indicated.  If no grading agency 
+is indicated, provide lumber that complies with the applicable rules of any rules -writing agenc y 
+certified by the ALSC Board of Review.  Provide lumber graded by an agency certified by the 
+ALSC Board of Review to inspect and grade lumber under the rules indicated.  
+1. Factory mark each piece of lumber with grade stamp of grading agency.  
+2. Where nominal si zes are indicated, provide actual sizes required by DOC PS 20 for 
+moisture content specified.  Where actual sizes are indicated, they are minimum dressed 
+sizes for dry lumber.  
+2.2 WOOD -PRESERVATIVE -TREATED MATERIALS  
+A. Preservative Treatment by Pressure Process:  AWPA U1; Use Category UC2 for interior 
+construction not in contact with the ground, Use Category UC3b for exterior construction not in 
+contact with the ground, and Use Category UC4a for items in contact with the ground.  
+1. Preservative Chemicals:  Acceptable  to authorities having jurisdiction and containing no 
+arsenic or chromium.  
+B. Kiln-dry material after treatment to a maximum moisture content of 19 percent for lumber and 15 
+percent for plywood.  Do not use material that is warped or does not comply with req",282,AWPA U1,282, awpa u1
