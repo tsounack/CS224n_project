@@ -2,12 +2,12 @@ from tqdm import tqdm
 
 import os
 import json
-import utils
+import mugi.utils as utils
 from typing import Dict, List
 import argparse
 import logging
-from model import get_language_model, get_reranker
-import benchmark
+# from model import get_language_model, get_reranker
+# import benchmark
 from dotenv import load_dotenv
 import os
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')

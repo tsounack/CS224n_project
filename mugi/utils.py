@@ -5,9 +5,9 @@ from typing import List, Dict, Tuple, Union
 # from rank_gpt import write_eval_file
 from pyserini.search import LuceneSearcher, get_topics, get_qrels
 import tempfile
-from trec_eval import EvalFunction
+# from trec_eval import EvalFunction
 from openai import OpenAI
-import benchmark
+# import benchmark
 class PromptTemplate():
     def __init__(self):
         pass
@@ -33,11 +33,11 @@ class PromptTemplate():
     def get_prefix_prompt_pseudo_doc_zs(query, document = None): #dl19 ndcg 100: 71.36 @10 1k: 73.6 ndcg@10
         return [{
                     "role": "system",
-                    "content": "You are PassageGenGPT, an AI capable of generating concise, informative, and clear pseudo passages on specific topics."
+                    "content": "You are PassageGenGPT, an AI capable of generating concise, informative, and clear pseudo queries based on an original query."
                 },
                 {
                     "role": "user",
-                    "content": f"Generate one passage that is relevant to the following query: '{query}'. The passage should be concise, informative, and clear"
+                    "content": f"Generate one new query that is relevant to the following query: '{query}'. The query should be concise, informative, and clear and would be similar to the orinal query."
                 },
                 {
                     "role": "assistant",

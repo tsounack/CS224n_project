@@ -3,8 +3,10 @@ import torch
 from openai import OpenAI
 from mugi.mugi import generate_pseudo_references
 from rank_bm25 import BM25Okapi
-from utils import extract_text_from_pdf, preprocess
+from utils1 import extract_text_from_pdf, preprocess
 from typing import List
+from transformers import BertTokenizer, BertModel
+
 
 class MuGI:
     """
@@ -125,3 +127,35 @@ class MuGI:
         tokenized_docs = [preprocess(doc) for doc in documents]
         bm25 = BM25Okapi(tokenized_docs)
         return bm25
+    
+    def _run_bm25(self, pdf_path: str, model_name: str, num_queries: int, num_repetitions: int, model: object, tokenizer: object, k: int=2,):
+        """
+        Runs the bm25 with mugi algorithim end to end assembling the different methods 
+
+        Args:
+            pdf_path (str): The path to the PDF document.
+            model_name (str): The model to use: 'gpt-3.5-turbo-1106'
+            num_queries (int): the number of additional queries 
+            num_repitions (int): the number of times to repeat the query
+            model (object): The model used for embedding the queries and entries.
+            tokenizer (object): The tokenizer used for tokenizing the queries and entries. 
+            k (int, optional): The number of top-ranked entries to return. Defaults to 2.
+
+        Returns:
+            out_docs (List[str]): sorted list of strings representing text based on relevance to query 
+            out_pages (List[str]): corresponding pages to the text in out_docs
+        """
+        total_query = self.generate_total_query(model_name, num_queries, num_queries)
+        print(total_query)
+        bm25_sorted, bm25_pages = self.rank_entries(pdf_path, total_query, k)
+        reranked_sorted, pages = self.rerank_entries(total_query, bm25_sorted, bm25_pages, model, tokenizer)
+        return reranked_sorted, pages
+
+if __name__ == "__main__":
+    # Load pre-trained BERT model and tokenizer
+    model_name = 'bert-large-cased-whole-word-masking'
+    tokenizer = BertTokenizer.from_pretrained(model_name)
+    model = BertModel.from_pretrained(model_name)
+    mugi = MuGI("what is the address of the architect?")
+    sorted_paragraphs, paragraph_idx = mugi._run_bm25('Data/Lakers_Specification.pdf', 'gpt-3.5-turbo-1106', 1, 3, model, tokenizer, 5)
+    print(sorted_paragraphs, '\n', paragraph_idx)

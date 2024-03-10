@@ -2,7 +2,7 @@ from transformers import BertTokenizer, BertModel
 import torch
 from sklearn.metrics.pairwise import cosine_similarity
 import PyPDF2
-from utils import extract_text_from_pdf
+from utils1 import extract_text_from_pdf
 
 # Load pre-trained BERT model and tokenizer
 model_name = 'bert-large-cased-whole-word-masking'
@@ -72,8 +72,8 @@ def extract_relevant_pages_embeddings(pdf_path, query, k=2):
     return list(out_docs), list(out_pages)
 
 if __name__ == "__main__":
-    out_pages, out_docs = extract_relevant_pages_embeddings('Data/Lakers_Specification_TEST.pdf', "What is the steel made out of for framing?", 6)
-    print(out_pages, out_docs)
+    out_pages, out_docs = extract_relevant_pages_embeddings('Data/Lakers_Specification.pdf', "what is the address of the architect?", 5)
+    print(out_pages,'\n', out_docs)
 
 
 
