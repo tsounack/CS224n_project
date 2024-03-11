@@ -1,6 +1,6 @@
 from rank_bm25 import BM25Okapi
 import PyPDF2
-from utils import extract_text_from_pdf, preprocess
+from utils1 import extract_text_from_pdf, preprocess
 
 def bm25_obj(pdf_path):
     #preprocess the pdf into a list of documents 
@@ -45,6 +45,6 @@ def extract_relevant_pages_bm25(bm25, pdf_path, query, k=2):
 
 if __name__ == "__main__":
     bm25 = bm25_obj('Data/Lakers_Specification.pdf')
-    output_docs, output_pages = extract_relevant_pages_bm25(bm25, 'Data/Lakers_Specification.pdf', "what is the address of the architect?", 6)
-    print(output_docs, output_pages)
+    output_docs, output_pages = extract_relevant_pages_bm25(bm25, 'Data/Lakers_Specification.pdf', "what is the address of the architect?", 5)
+    print(output_docs, '\n', output_pages)
 
