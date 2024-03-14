@@ -73,7 +73,7 @@ def generate_pseudo_references(language_model_name: str, topics: Dict[str, Dict[
             print(client)
             models = [
                 # ('gpt-4-1106-preview', generated_document_num),
-                ('gpt-3.5-turbo-1106', min(3, generated_document_num))
+                ('gpt-3.5-turbo-1106', generated_document_num)
             ]
             
             for model_name, doc_num in models:
@@ -86,6 +86,7 @@ def generate_pseudo_references(language_model_name: str, topics: Dict[str, Dict[
         else:
             gen_key = f'gen_cand_{language_model_name}'
             topics[key].setdefault(gen_key, [])
+            print(generated_document_num)
             for _ in range(generated_document_num):
                 output = language_model.get_response(message)
                 topics[key][gen_key].append(output)

@@ -1,4 +1,4 @@
-Question,Paragraph,Page,answer
+Question,Paragraph,Page,answer,bm25_k=3_pages
 What type of contract is the Lakers Practice Facility Under?,"Back-Check No. 2 - ASI 009 
 January 15, 2016 
 Lakers Practice Facility 
@@ -56,7 +56,7 @@ of Project site, during construction period.  Contractor's use of premises is li
 Owner's right to perform work or to retain other contractors on portions of Project. 
 B. 
 Use of Site:  Limit use of premises to areas within the Contract limits indicated.  Do not disturb 
-portions of Project site beyond areas in which the Work is indicated. ",3,single prime contract
+portions of Project site beyond areas in which the Work is indicated. ",3,single prime contract,"[1, 1, 117]"
 What is the project number?,"Back-Check No. 2 - ASI 009 
 January 15, 2016 
 Lakers Practice Facility 
@@ -114,7 +114,7 @@ of Project site, during construction period.  Contractor's use of premises is li
 Owner's right to perform work or to retain other contractors on portions of Project. 
 B. 
 Use of Site:  Limit use of premises to areas within the Contract limits indicated.  Do not disturb 
-portions of Project site beyond areas in which the Work is indicated. ",3,2014-015
+portions of Project site beyond areas in which the Work is indicated. ",3,2014-015,"[1, 1, 26]"
 Who is the architect of this project?,"Back-Check No. 2 - ASI 009 
 January 15, 2016 
 Lakers Practice Facility 
@@ -172,7 +172,7 @@ of Project site, during construction period.  Contractor's use of premises is li
 Owner's right to perform work or to retain other contractors on portions of Project. 
 B. 
 Use of Site:  Limit use of premises to areas within the Contract limits indicated.  Do not disturb 
-portions of Project site beyond areas in which the Work is indicated. ",3,"Rossetti Associates, Inc."
+portions of Project site beyond areas in which the Work is indicated. ",3,"Rossetti Associates, Inc.","[48, 48, 48]"
 What is the telephone number of the Architect?,"Back-Check No. 2 - ASI 009 
 January 15, 2016 
 Lakers Practice Facility 
@@ -230,7 +230,7 @@ of Project site, during construction period.  Contractor's use of premises is li
 Owner's right to perform work or to retain other contractors on portions of Project. 
 B. 
 Use of Site:  Limit use of premises to areas within the Contract limits indicated.  Do not disturb 
-portions of Project site beyond areas in which the Work is indicated. ",3,(313) 463-5151
+portions of Project site beyond areas in which the Work is indicated. ",3,(313) 463-5151,"[26, 1, 47]"
 What is the address of the Architect?,"Back-Check No. 2 - ASI 009 
 January 15, 2016 
 Lakers Practice Facility 
@@ -288,7 +288,7 @@ of Project site, during construction period.  Contractor's use of premises is li
 Owner's right to perform work or to retain other contractors on portions of Project. 
 B. 
 Use of Site:  Limit use of premises to areas within the Contract limits indicated.  Do not disturb 
-portions of Project site beyond areas in which the Work is indicated. ",3,"160 West Fort, Suite 400, Detroit, Michigan 48226"
+portions of Project site beyond areas in which the Work is indicated. ",3,"160 West Fort, Suite 400, Detroit, Michigan 48226","[1, 1, 117]"
 What type of welding electrodes are used for reinforcing bars. ,"Back-Check No. 2 - ASI 009 
 January 15, 2016 
 Lakers Practice Facility 
@@ -353,7 +353,7 @@ ties.
 Heating reinforcement for bending is prohibited. Do not install bars with unscheduled 
 kinks or bends. 
 3. 
-Bars larger than #4 shall not be bent once cast in concrete or masonry. ",131,"AWS A5.1 E80XX Series, low hydrogen, having a minimum yield point of 80,000 psi."
+Bars larger than #4 shall not be bent once cast in concrete or masonry. ",131,"AWS A5.1 E80XX Series, low hydrogen, having a minimum yield point of 80,000 psi.","[131, 131, 199]"
 What are the specificaitons for cold-formed steel tubing?,"Back-Check No. 2 - ASI 009 
 January 15, 2016 
 Lakers Practice Facility 
@@ -416,7 +416,7 @@ Except as otherwise indicated, fabricate using mitered corners, welded brackets 
 plates and a minimum number of joints for field connections. 
 D. 
 Equip units with integrally welded anchor straps for casting into cast-in-place concrete wherever 
-possible. ",225,"ASTM A 500, Grade B."
+possible. ",225,"ASTM A 500, Grade B.","[219, 219, 216]"
 What are the specifcations for chain-link fencing?,"Back-Check No. 2 - ASI 009 
 January 15, 2016 
 Lakers Practice Facility 
@@ -456,7 +456,7 @@ inch (60 mm) OD line posts and 2-7/8 inch (73 mm) OD corner and pull posts, with
 (41 mm) OD top rails. 
 B. 
 Polyethylene Sheet:  Reinforced, fire-resistive sheet, 10 mils (0.25 mm) minimum thickness, 
-with flame-",55,"Minimum 2 inch (51 mm), 0.148 inch (3.8 mm) thick, galvanized steel, chain-link fabric fencing; minimum 6 feet high with galvanized steel pipe posts; minimum 2-3/8 inch (60 mm) OD line posts and 2-7/8 inch (73 mm) OD corner and pull posts, with 1-5/8 inch (41 mm) OD top rails."
+with flame-",55,"Minimum 2 inch (51 mm), 0.148 inch (3.8 mm) thick, galvanized steel, chain-link fabric fencing; minimum 6 feet high with galvanized steel pipe posts; minimum 2-3/8 inch (60 mm) OD line posts and 2-7/8 inch (73 mm) OD corner and pull posts, with 1-5/8 inch (41 mm) OD top rails.","[1, 1, 26]"
 What particulates need to be prevented of being deposited into the air duing on site operations? ,"Back-Check No. 2 - ASI 009 
 January 15, 2016 
 Lakers Practice Facility 
@@ -512,7 +512,7 @@ C.
 Non-Storm Water Management 
 1. 
 For projects designated as Risk Level 1 and above, implement measures to control all 
-non-storm water discharges during construc",296,"particulates can include, but are not limited to, sediment, nutrients, trash, metals, bacteria, oil and grease and organics."
+non-storm water discharges during construc",296,"particulates can include, but are not limited to, sediment, nutrients, trash, metals, bacteria, oil and grease and organics.","[64, 64, 108]"
 What should be included in the Completed Coordiantion/Record BIM model?,"Back-Check No. 2 - ASI 009 
 January 15, 2016 
 Lakers Practice Facility 
@@ -555,7 +555,7 @@ shall refer to a portable document format which meets the following requirements
 1. 
 Bookmarked – All PDF’s shall have establish",29,"this model is the close-out submittal to the Owner and 
 includes the information within the Final Coordination Model as well as any project updates that 
-have taken place during installations such as RFI responses, as-built conditions, etc.   "
+have taken place during installations such as RFI responses, as-built conditions, etc.   ","[32, 31, 34]"
 What is included in the final coordination model?,"Back-Check No. 2 - ASI 009 
 January 15, 2016 
 Lakers Practice Facility 
@@ -599,7 +599,7 @@ shall refer to a portable document format which meets the following requirements
 Bookmarked – All PDF’s shall have establish",29,"this model shows all trades’ systems fully coordinated models within 
 the Base Architectural Model.  All clashes have been resolved.  No further coordination is 
 required.  The work shown within this model represents the upcoming installations of each 
-system. "
+system. ","[32, 32, 29]"
 What software is used for the BIM Model?,"Back-Check No. 2 - ASI 009 
 January 15, 2016 
 Lakers Practice Facility 
@@ -635,7 +635,7 @@ discrepancies pertaining to their own model.  Each Subcontractor shall purchase 
 cost licenses of Navisworks 2014 including any maintenance and software updates during the 
 course of the Project. 
 D. 
-All BIM participants are required to attend all model review meetings, are expected to",30,Navisworks 2014
+All BIM participants are required to attend all model review meetings, are expected to",30,Navisworks 2014,"[36, 31, 37]"
 What is the purpose of the weekly BIM Development Meetings?,"H. Typical utility corridors and above ceiling space zones for each trade will be established by the 
 group at the beginning of the process.  These zones will be adjusted through the coordination 
 process to meet actual installation req uirements during system development.   
@@ -656,7 +656,7 @@ Contractor/CM will facilitate the meeting and will make final decisions on clash
 that are the least impact to the project as a whole.  WEEKLY BIM DEVELOPMENT 
 MEETINGS WILL NOT BE USED TO RESOL VE INDIVIDUAL SUBCONTRACTOR’S 
 WORK.  If a Subcontractor does not post a clash -free system of its own work, that 
-Subcontractor will be considered unprepared for the",31,the review and resolution of items that are found as models are de veloped in conjunction with the project schedule.
+Subcontractor will be considered unprepared for the",31,The review and resolution of items that are found as models are developed in conjuction with the project schedule. ,"[31, 31, 35]"
 Whose responsibility is it to perform tests and inspections not explicitly assigned to the owner?," Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  QUALITY REQUIREMENTS  014000 - 6  B. Tests and inspections not explicitly assigned to Owner are Contractor's responsibility.  Unless 
 otherwise indicated, provide quality -control services specified and those required by Authorities  
@@ -682,7 +682,7 @@ D. Retesting/Reinspecting:  Regardless of whether original tests or inspections 
 responsibility, provide quality -control services, including retesting and reinspecting, for 
 construction that replaced Work that failed to comply with the Contract Documents.  
 E. Testing Agency Responsibilities:  Cooperate with Architect, and Contract or in performance of 
-duties.  Provide qualified",50,Contractor's responsibility
+duties.  Provide qualified",50,Contractors Responsibility. ,"[50, 46, 46]"
 How much advance notice should the contractor provide to testing agencies before performing work that requires testing or inspecting?," Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  QUALITY REQUIREMENTS  014000 - 6  B. Tests and inspections not explicitly assigned to Owner are Contractor's responsibility.  Unless 
 otherwise indicated, provide quality -control services specified and those required by Authorities  
@@ -708,7 +708,7 @@ D. Retesting/Reinspecting:  Regardless of whether original tests or inspections 
 responsibility, provide quality -control services, including retesting and reinspecting, for 
 construction that replaced Work that failed to comply with the Contract Documents.  
 E. Testing Agency Responsibilities:  Cooperate with Architect, and Contract or in performance of 
-duties.  Provide qualified",50,Notify testing agencies at least 24 hours in advance of time when Work that requires testing or inspecting will be performed.
+duties.  Provide qualified",50,Notify testing agencies at least 24 hours in advance of time when Work that requires testing or inspecting will be performed.,"[50, 50, 49]"
 What should the contractor do when quality-control services are indicated as their responsibility?," Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  QUALITY REQUIREMENTS  014000 - 6  B. Tests and inspections not explicitly assigned to Owner are Contractor's responsibility.  Unless 
 otherwise indicated, provide quality -control services specified and those required by Authorities  
@@ -734,8 +734,7 @@ D. Retesting/Reinspecting:  Regardless of whether original tests or inspections 
 responsibility, provide quality -control services, including retesting and reinspecting, for 
 construction that replaced Work that failed to comply with the Contract Documents.  
 E. Testing Agency Responsibilities:  Cooperate with Architect, and Contract or in performance of 
-duties.  Provide qualified",50,"provide quality -control services, including retesting and reinspecting, for 
-construction that replaced Work that failed to comply with the Contract Documents."
+duties.  Provide qualified",50,"provide quality-control services, including retesting and reinspecting, for construction that replaced Work that failed to comply with Contract Documents. ","[45, 50, 34]"
 "If directed by the Authorities Having Jurisdiction (AHJ), where should the contractor submit additional copies of each written report?"," Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  QUALITY REQUIREMENTS  014000 - 6  B. Tests and inspections not explicitly assigned to Owner are Contractor's responsibility.  Unless 
 otherwise indicated, provide quality -control services specified and those required by Authorities  
@@ -761,7 +760,7 @@ D. Retesting/Reinspecting:  Regardless of whether original tests or inspections 
 responsibility, provide quality -control services, including retesting and reinspecting, for 
 construction that replaced Work that failed to comply with the Contract Documents.  
 E. Testing Agency Responsibilities:  Cooperate with Architect, and Contract or in performance of 
-duties.  Provide qualified",50,"Submit additional copies of each written report directly to Authorities Having Jurisdiction (AHJ), when they so direct."
+duties.  Provide qualified",50,"Submit additional copies of each written report directly to Authorities Having Jurisdiction (AHJ), when they so direct.","[50, 50, 51]"
 For Storm Water Pollution Prevention what documents should I reference?,"Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  TEMPORARY STORM WATER POLLUTION CONTROL  015723 - 1  SECTION 015723 – TEMPORARY STORM WATER POLLUTION CONTROL  
 PART 1 - GENERAL  
@@ -788,9 +787,7 @@ PART 3 - EXECUTION
 3.1 QUALIFIED SWPPP DEVELOPER (QSD)  
 A. The owner shall designate a Qual ified SWPPP Developer (QSD) having registrations, 
 certifications and appropriate experience as defined by the State of California Construction 
-General Permit (CGP) Order No. 2009 -009-DWQ to perform the following:",61,"California Storm Water Best Management Practice Handbook for Construction Activity (BMP 
-Handbook)  
-B. Construction General Permit (CGP) Order No. 2009 -009-DWQ "
+General Permit (CGP) Order No. 2009 -009-DWQ to perform the following:",61,California Storm Water Best Management Practice Handbook for Construction Activity (BMP Handbook) and Construction General Permit (CGP) Order No. 2009-009-DWQ,"[61, 97, 66]"
 What does the SWPPP Praticioner need to measure for discharge monitering? ,"Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  TEMPORARY STORM WATER POLLUTION CONTROL  015723 - 2  1. Prepare, certify and amend as required th e project SWPPP document.  
 2. Assist the owner in obtaining permit coverage prior to the commencement of construction 
@@ -817,8 +814,7 @@ rain events.
 (NOAA) in accordance with Permit requirements.  
 8. Complete applicable monitoring, sampling, and inspect ion logs, forms and documents for 
 filing to the Storm Water Multiple Application and Report Tracking System (SMARTS).  
-9. Report Numeric Action Level (NAL) exceedances to SMART",62,"pH, turbidity, and non -visible 
-pollutant monitoring, according to the project risk level and project type. "
+9. Report Numeric Action Level (NAL) exceedances to SMART",62,"pH, turbidity, and non-visible pollutant monitoring, according to the project risk level and project type","[61, 62, 62]"
 How should loose stockpiled construction materials that are not actively being used be managed to prevent water quality threats?,"Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  TEMPORARY STORM WATER POLLUTION CONTROL  015723 - 3  1. For projects designated as Risk Level 1 and above, implement good site management 
 (i.e., ""housekeeping"") measures for construction materials that could potentially be a 
@@ -844,7 +840,7 @@ measures for waste management, which, at a minimum, shall consist of the followi
 a. Prevent disposal of an y rinse or wash waters or materials on impervious or 
 pervious site surfaces or into the storm drain system.  
 b. Ensure the containment of sanitation facilities (e.g., portable toilets) to prevent 
-discharges of pollutants to the storm water drainage system or",63,Cover and berm loose stockpiled construction materials that are not actively being used
+discharges of pollutants to the storm water drainage system or",63,Cover and berm loose stockpiled construction materials that are not actively being used,"[63, 63, 64]"
 For wood-preservative-treated materials what is the preservative treatment by pressure process?,"Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  ROUGH CARPENTRY  061000 - 4  D. Engineered Wood Products:  
   
@@ -872,7 +868,7 @@ contact with the ground, and Use Category UC4a for items in contact with the gro
 1. Preservative Chemicals:  Acceptable  to authorities having jurisdiction and containing no 
 arsenic or chromium.  
 B. Kiln-dry material after treatment to a maximum moisture content of 19 percent for lumber and 15 
-percent for plywood.  Do not use material that is warped or does not comply with req",282,AWPA U1
+percent for plywood.  Do not use material that is warped or does not comply with req",282,AWPA U1,"[282, 282, 280]"
 How should carboard and boxes be recycled? ,"Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  CONSTRUCTION WASTE MANAGEMENT AND DISPOSAL  017419 - 4  B. Waste Management Coordinator:  Appoint a waste management coordinator to be responsible 
 for implementing, monitoring, and reporting status of waste management work plan.  
@@ -899,8 +895,7 @@ A. Packaging:
 dry location.  
 2. Polystyrene Packaging:  Separate and bag materials.  
 3. Pallets:  As much as possible, require deliveries using pallets to remove pallets from 
-Project site.  For pallets that remain on -site, break down ",88,"Break down packaging in to flat sheets.  Bundle and store in a 
-dry location."
+Project site.  For pallets that remain on -site, break down ",88,Break down packaging into flat sheets. Bundle and store in a dry location.,"[16, 120, 41]"
 How should polystyrene packaging be recycled? ,"Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  CONSTRUCTION WASTE MANAGEMENT AND DISPOSAL  017419 - 4  B. Waste Management Coordinator:  Appoint a waste management coordinator to be responsible 
 for implementing, monitoring, and reporting status of waste management work plan.  
@@ -927,7 +922,7 @@ A. Packaging:
 dry location.  
 2. Polystyrene Packaging:  Separate and bag materials.  
 3. Pallets:  As much as possible, require deliveries using pallets to remove pallets from 
-Project site.  For pallets that remain on -site, break down ",88,Separate and bag materials.
+Project site.  For pallets that remain on -site, break down ",88,Sperate and bag materials. ,"[88, 88, 16]"
 How should pallets be recycled?," Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  CONSTRUCTION WASTE MANAGEMENT AND DISPOSAL  017419 - 4  B. Waste Management Coordinator:  Appoint a waste management coordinator to be responsible 
 for implementing, monitoring, and reporting status of waste management work plan.  
@@ -958,9 +953,9 @@ Project site.  For pallets that remain on -site, break down palle ts into compon
 pieces and comply with requirements for recycling wood.  
 4. Crates:  Break down crates into component wood pieces and comply with requirements 
 for recycling wood.  
-B. 518",88,"As much as possible, require deliveries using pallets to remove pallets from 
-Project site.  For pallets that remain on -site, break down palle ts into component wood 
-pieces and comply with requirements for recycling wood."
+B. 518",88,"As much as possible, require deliveries using pallets to remove pallets from
+Project site. For pallets that remain on-site, break down pallets into component wood
+pieces and comply with requirements for recycling wood.","[88, 16, 120]"
 How should crates be recyled?," Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  CONSTRUCTION WASTE MANAGEMENT AND DISPOSAL  017419 - 4  B. Waste Management Coordinator:  Appoint a waste management coordinator to be responsible 
 for implementing, monitoring, and reporting status of waste management work plan.  
@@ -991,7 +986,7 @@ Project site.  For pallets that remain on -site, break down palle ts into compon
 pieces and comply with requirements for recycling wood.  
 4. Crates:  Break down crates into component wood pieces and comply with requirements 
 for recycling wood.  
-B. 518",88,Break down crates into component wood pieces and comply with requirements for recycling wood. 
+B. 518",88,Break down crates into component wood pieces and comply with requirements for recycling wood. ,"[16, 120, 41]"
 What type of cleaning agents should not be used on site?," Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  CLOSEOUT PROCEDURES  017700 - 3  1.6 WARRANTIES  
 A. Submittal Time:  Submit written warranties on request of Architect for designated portions of 
@@ -1021,7 +1016,7 @@ PART 3 - EXECUTION
 3.1 FINAL CLEANING  
 A. General:  Provide final cleaning.  Conduct cleaning and waste -removal operations to comply 
 with local laws and ordinances and Federal and local env ironmental and antipollution 
-regulations.  ",93,Do not use cleaning agents that are potentially hazardous to health or property or that might damage finished surfaces. 
+regulations.  ",93,Do not use cleaning agents that are potentially hazardous to health or property or that might damage finished surfaces. ,"[93, 93, 138]"
 What is the definition of agrifiber?,"Processing(CS 224N)/CS224n_project/DocProcessing.py""
  Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  SUSTAINABLE DESIGN REQUIREMENTS  018113 - 2  1.4 DEFINITIONS  
@@ -1046,7 +1041,7 @@ H. Recycled Content Materials: Products that contain pre -consumer or post -cons
 I. Post-Consumer Recycled Content: The percentage by weight of constituent materials that have 
 been recovered or otherwise diverted from the solid -waste stream after consumer use  
 J. Pre-Consumer Recycled Content: Materials that have been recovered or other wise diverted 
-from the solid -waste stream during the manufacturi",98,Composite panel products derived from agricultural fiber
+from the solid -waste stream during the manufacturi",98,Composite panel products derived from agricultural fiber,"[1, 1, 117]"
 What is the definition of sealant?,"F. LEED NC: The Leadership in Energy & Environmental Design green building rating system 
 developed and adopted by the USGBC for new construction and major renovations of building s 
 G. Light Pollution: Light that extends beyond its source such that the additional light is wasted in an 
@@ -1069,7 +1064,7 @@ photochemical reactivity, listed in EPA 40 CFR 51.100(s), are also excluded from
 definition.  
 1.5 SUBMITTALS  
 A. General: Additional Sustainable Design submittal requirements are included in other sections of 
-the Specifica tions.",98,Any material that fills and seals gaps betwee n other materials
+the Specifica tions.",98,Any material that fills and seals gaps between other materials,"[1, 1, 117]"
 What is the definition of VOCs?,"F. LEED NC: The Leadership in Energy & Environmental Design green building rating system 
 developed and adopted by the USGBC for new construction and major renovations of building s 
 G. Light Pollution: Light that extends beyond its source such that the additional light is wasted in an 
@@ -1092,7 +1087,7 @@ photochemical reactivity, listed in EPA 40 CFR 51.100(s), are also excluded from
 definition.  
 1.5 SUBMITTALS  
 A. General: Additional Sustainable Design submittal requirements are included in other sections of 
-the Specifica tions.",98,"Any compound of carbon, excluding carbon monoxide, carbon dioxide, carbonic acid, metallic carbides or carbonates, and ammonium carbonate, which participates in atmospheric photochemical reactions."
+the Specifica tions.",98,"Any compound of carbon, excluding carbon monoxide, carbon dioxide, carbonic acid, metallic carbides or carbonates, and ammonium carbonate, which participates in atmospheric photochemical reactions.","[1, 1, 117]"
 What is the mesasurement tolerance for duct air temperature?,"3. System specific test equipment, tools and instruments (e.g. test equipment specific to a 
 piece of equipm ent) required for commissioning shall be included in the base bid price by 
 the Contractor and retained by the Owner.  
@@ -1112,7 +1107,7 @@ c. Test instruments shall have had a certified calibration within the last 12 mo
 d. Sensors installed at the factory with provided calibration certification need not be 
 field calibrated.  
 7. Measurement Tolerances, Standard Ap plications (Sensor and Required Tolerance (+/ -)) 
-a. Outside air, space air, duct air temperature: 1.0 deg F. ",114,1.0 deg F
+a. Outside air, space air, duct air temperature: 1.0 deg F. ",114,1.0 deg F,"[114, 42, 170]"
 What is the measurement tolerance of relative humitdity?,"Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  COMMISSIONING REQUIREMENTS  019100 - 5  b. Watt-hour, Voltage & Amperage: 1% of range.  
 c. Pressures, air, water and gas: 3% of design.  
@@ -1149,7 +1144,7 @@ apprised of commissi oning progress and scheduling changes.
 c. Testing or review approvals and non -conformance and deficiency reports are 
 made with the review and testing as described in later sections.  
 2. Commissioning Work Products  
-a. The commissioning process generates a number of w ritten work pr",115,5%.
+a. The commissioning process generates a number of w ritten work pr",115,5%.,"[114, 206, 1]"
 What is the measurement tolerance of CO2 monitor in percent?,"Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  COMMISSIONING REQUIREMENTS  019100 - 5  b. Watt-hour, Voltage & Amperage: 1% of range.  
 c. Pressures, air, water and gas: 3% of design.  
@@ -1186,7 +1181,7 @@ apprised of commissi oning progress and scheduling changes.
 c. Testing or review approvals and non -conformance and deficiency reports are 
 made with the review and testing as described in later sections.  
 2. Commissioning Work Products  
-a. The commissioning process generates a number of w ritten work pr",115,0.1 %.
+a. The commissioning process generates a number of w ritten work pr",115,0.1 %.,"[114, 115, 206]"
 What is the measurement tolerance of CO2 monitor in ppm?,"Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  COMMISSIONING REQUIREMENTS  019100 - 5  b. Watt-hour, Voltage & Amperage: 1% of range.  
 c. Pressures, air, water and gas: 3% of design.  
@@ -1223,7 +1218,7 @@ apprised of commissi oning progress and scheduling changes.
 c. Testing or review approvals and non -conformance and deficiency reports are 
 made with the review and testing as described in later sections.  
 2. Commissioning Work Products  
-a. The commissioning process generates a number of w ritten work pr",115,75 ppm
+a. The commissioning process generates a number of w ritten work pr",115,75 ppm,"[114, 115, 206]"
 What is the measurement tolerance for the flow rates of air?,"Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  COMMISSIONING REQUIREMENTS  019100 - 5  b. Watt-hour, Voltage & Amperage: 1% of range.  
 c. Pressures, air, water and gas: 3% of design.  
@@ -1260,7 +1255,7 @@ apprised of commissi oning progress and scheduling changes.
 c. Testing or review approvals and non -conformance and deficiency reports are 
 made with the review and testing as described in later sections.  
 2. Commissioning Work Products  
-a. The commissioning process generates a number of w ritten work pr",115,10% of design
+a. The commissioning process generates a number of w ritten work pr",115,10% of design,"[114, 199, 103]"
 What is the measurement tolerance for the flow rates of water?,"Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  COMMISSIONING REQUIREMENTS  019100 - 5  b. Watt-hour, Voltage & Amperage: 1% of range.  
 c. Pressures, air, water and gas: 3% of design.  
@@ -1297,7 +1292,7 @@ apprised of commissi oning progress and scheduling changes.
 c. Testing or review approvals and non -conformance and deficiency reports are 
 made with the review and testing as described in later sections.  
 2. Commissioning Work Products  
-a. The commissioning process generates a number of w ritten work pr",115,4% of desi gn.
+a. The commissioning process generates a number of w ritten work pr",115,4% of design,"[114, 199, 103]"
 What is the process for curing concrete flatwork?," Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  CAST-IN-PLACE CONCRETE  033000 - 14  4. Finish walk slabs with a medium broom finis h, with tooled edges, as approved by the 
 Architect on a 4 ft. square sample panel to be provided by the Contractor where directed 
@@ -1326,7 +1321,7 @@ manufacturer.
 a. Inspect treated surfaces daily for 14 days for evidence of dryin g. 
 b. Re-wet the surfaces and apply a new application of curing compound, if premature 
 drying occurs, as soon as can be done after finishing without marring the surfaces.  
-2. All interio",146,spray the specified curing compound uniformly in a minimum of 2 coats at 90 degrees to each other at 3 times the minimum coverage rates recommended by the manufacturer.
+2. All interio",146,spray the specified curing compound uniformly in a minimum of 2 coats at 90 degrees to each other at 3 times the minimum coverage rates recommended by the manufacturer.,"[146, 146, 39]"
 What is a penetrating dye?,"Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  POLISHED CONCRETE FINISHING  033543 - 3  PART 2 - PRODUCTS  
 2.1 DYE MATERIALS  
@@ -1359,7 +1354,7 @@ required to reveal light exposure of  aggregate to match approved mockup.
 a. Grind floor to within 2 -3 inches of any installed walls with multiple passes of 
 finer-grit pads to indicated level of grit finish, removing construction debris, floor 
 slab imperfections and until there is a uniform scra tch pattern and desired concrete 
-aggregate exposure.",151,Solvent based color liquid dye concentrate
+aggregate exposure.",151,Solvent based color liquid dye concentrate,"[152, 151, 1]"
 What is chemical hardener?,"Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  POLISHED CONCRETE FINISHING  033543 - 3  PART 2 - PRODUCTS  
 2.1 DYE MATERIALS  
@@ -1392,7 +1387,7 @@ required to reveal light exposure of  aggregate to match approved mockup.
 a. Grind floor to within 2 -3 inches of any installed walls with multiple passes of 
 finer-grit pads to indicated level of grit finish, removing construction debris, floor 
 slab imperfections and until there is a uniform scra tch pattern and desired concrete 
-aggregate exposure.",151,Water -borne  acrylic penetrating material.
+aggregate exposure.",151,Water-borne acryclic penetrating material ,"[1, 1, 280]"
 What is the specified product of penetrating dye?,"Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  POLISHED CONCRETE FINISHING  033543 - 3  PART 2 - PRODUCTS  
 2.1 DYE MATERIALS  
@@ -1425,7 +1420,7 @@ required to reveal light exposure of  aggregate to match approved mockup.
 a. Grind floor to within 2 -3 inches of any installed walls with multiple passes of 
 finer-grit pads to indicated level of grit finish, removing construction debris, floor 
 slab imperfections and until there is a uniform scra tch pattern and desired concrete 
-aggregate exposure.",151,"Scofield, L. M. Company; Formula One Liquid Dye Concentrate"
+aggregate exposure.",151,"Scofield, L. M. Company; Formula One Liquid Dye Concentrate","[151, 26, 1]"
 What is the specified product for chemical hardener?,"Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  POLISHED CONCRETE FINISHING  033543 - 3  PART 2 - PRODUCTS  
 2.1 DYE MATERIALS  
@@ -1458,8 +1453,7 @@ required to reveal light exposure of  aggregate to match approved mockup.
 a. Grind floor to within 2 -3 inches of any installed walls with multiple passes of 
 finer-grit pads to indicated level of grit finish, removing construction debris, floor 
 slab imperfections and until there is a uniform scra tch pattern and desired concrete 
-aggregate exposure.",151,"Scofield, L. M. Company.  
-g. Vexcon Chemicals Inc."
+aggregate exposure.",151,"Scofield, L. M. Company; Formula One Guard-W","[280, 130, 26]"
 What products for product data informational submittals need to be supplied for hydraulic cement underlayment?,"Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  HYDRAULIC CEMENT UNDERLAYMENT  035416 - 1  SECTION 035416  - HYDRAULIC CEMENT UNDERLAYMENT  
 PART 1 - GENERAL  
@@ -1487,7 +1481,7 @@ PART 2 - PRODUCTS
 2.1 HYDRAULIC CEMENT UNDERLAYMENTS  
 A. Hydraulic Cement Underlayment: Polymer -modified, self -leveling, hyd raulic cement product that 
 can be applied in minimum uniform thickness of 1/4 inch  (6 mm ) and that can be feathered at 
-edges to match adjacent floor elevations.",163,"For coatings, indicating VOC content."
+edges to match adjacent floor elevations.",163,"For coatings, indicating VOC content.","[163, 22, 164]"
 What type of products should be used for epoxy injection adhesive?,"2. Proof of Ratio and Pressure Testing.  
 I. At all Times during the course of the work the contractor shall keep complete an accurate 
 record of the pressure an d ratio tests specified above.  These records shall be available to the 
@@ -1503,8 +1497,7 @@ C. Surface Sealant:  SikaTop 123 as manufactured by Sika Corporation, or ETR Epo
 manufactured by Simpson Strong Tie, or approved equal, and shall be suff iciently strong to 
 resist injection pressures to prevent leakage during injection.  
 D. Provide other materials as required and recommended by manufacturers subject to approval by 
-architect/engineer. ",169,"Sikadur 53 as manufactured by Sika Corporation, tel (80 0) 
-933-7452, or ETI"
+architect/engineer. ",169,"Sikadur 53, ETI","[167, 167, 170]"
 How heavy should the copper-laminated flashing be?,"Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  UNIT MASONRY  042000 - 7  B. Flexible Joint Filler Strips:  Built -in between concrete masonry  where indicated; molded from 
 natural or synthetic rubbers, alone or in combination, conforming to ASTM D 2000, and 
@@ -1524,7 +1517,7 @@ materials produced by flashing manufacturer.
 C. Edge Drip:  Stainless -steel, 0.015 inch (0.38 mm) thick.  
 D. Adhesives, Primers, and Seam Tapes for Flashings: Flashing manufacturer's standard products 
 or products recommended by flashing manufacturer for bonding flashing sheets to each other 
-and to substrat es. ",179,5-oz./sq. ft.
+and to substrat es. ",179,5-oz./sq. ft.,"[120, 16, 182]"
 For cold-formed metal framing what is the permisible lateral deflection?," Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  COLD-FORMED METAL FRAMING  054000 - 2  G. Reference standards:  
 1. AISI Specifications - ""Specification for  the Design of Cold -Formed Steel Structural 
@@ -1542,7 +1535,7 @@ no case less than 30 psf.
 I. Deflection:  Lateral deflection of L/360 under full design load.  
 J. Movement:  Make all necessary provisions for movement of framing members without damage 
 to finishes and substrates attached to them, failure of connections, undue strain on fasteners, or 
-other detrimental effects when subjected to a maximum ambient temperature range of 120 deg. ",216,L/360
+other detrimental effects when subjected to a maximum ambient temperature range of 120 deg. ",216,L/360,"[216, 219, 219]"
 What is the minimum yield strength for framing accessories for cold-formed metal framing?,"Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  COLD-FORMED METAL FRAMING  054000 - 5  c. Studs supporting metal lath shall have a minimum flan ge width of  1/2"".  Studs 
 support ing gypsum sheathing shall have a minimum flange width of 1 -3/8"".  
@@ -1568,7 +1561,7 @@ C. Structural framing shall have ends squarely cut by shearing or sawing, and sh
 plumb, square, true to line, and securely fastened in accordance with the shop drawings.  
 D. Fabrication, handling, and erection of the structural framing and  assemblies shall be done in a 
 manner to prevent any damage or distortion of the framing.  
-E. Cold-formed tracks when set to adjacent structures, shall have web conta",219,33 KSI
+E. Cold-formed tracks when set to adjacent structures, shall have web conta",219,33 KSI,"[219, 219, 194]"
 What is the minimum protective coating for framing accessories for cold-formed metal framing?,"Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  COLD-FORMED METAL FRAMING  054000 - 5  c. Studs supporting metal lath shall have a minimum flan ge width of  1/2"".  Studs 
 support ing gypsum sheathing shall have a minimum flange width of 1 -3/8"".  
@@ -1594,7 +1587,7 @@ C. Structural framing shall have ends squarely cut by shearing or sawing, and sh
 plumb, square, true to line, and securely fastened in accordance with the shop drawings.  
 D. Fabrication, handling, and erection of the structural framing and  assemblies shall be done in a 
 manner to prevent any damage or distortion of the framing.  
-E. Cold-formed tracks when set to adjacent structures, shall have web conta",219,G -60 galvanized finish
+E. Cold-formed tracks when set to adjacent structures, shall have web conta",219,G-60 galvanized finish,"[219, 219, 218]"
 What does NAAMM stand for with respect to decorative metal panels?,"A. AAMA - American Architectural Manufacturers Association.  
 1. AAMA 2605: Voluntary Specification, Performance Requirements and Te st Procedures 
 for Superior Performing Organic Coatings on Aluminum Extrusions and Panels.  
@@ -1613,7 +1606,7 @@ D. CFR - Code of Federal Regulations.
 1. 40 CFR 59, S ubpart D: National Volatile Organic Compound Emission Standards for 
 Architectural Coatings.  
 E. NAAMM - National Association of Architectural Metal Manufacturers.  
-1. Metal Finishes Manual for Architectural and Metal Products.",247,National Association of Architectural Metal Manufacturers.
+1. Metal Finishes Manual for Architectural and Metal Products.",247,National Association of Architectural Metal Manufacturers.,"[242, 242, 247]"
 For decorative metal fins what should be the thickness of aluminum tubes?,"Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  DECORATIVE METAL FINS  057000 - 3  1.8 COORDINATION  
 A. Coordinate installation of anchorages for ornamental metal items.  Furnish setting drawings, 
@@ -1639,7 +1632,7 @@ b. Metal spacers to be 'Black', unless otherwise indicated.
 2. Thickness:  0.125 inch (3 mm) minimum.  
 C. Extruded Bars and Shapes:  ASTM B 221, Alloy 6063 -T5/T52.  
 D. Plate and Sheet:  ASTM B 209, Alloy 3003 -H14.  
-E. Die and Hand Forgings:  ASTM B 247, Alloy 6061 -T6.",249,0.125 inch
+E. Die and Hand Forgings:  ASTM B 247, Alloy 6061 -T6.",249,0.125 inch,"[247, 249, 250]"
 What color should the glass be for tempered glass on metal railings?,"Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  GLAZED DECORATIVE METAL RAILINGS  057313 - 4  D. Bars and Shapes: ASTM A 27 6, Type 304.  
 2.6 GLASS AND GLAZING MATERIALS  
@@ -1654,7 +1647,7 @@ than 12.0 mm.
 C. Safety Glazing Labeling: Permanently mark glass with certification label of the SGCC or another 
 certification agency acceptable to authorities having jurisdiction or manufacture]. Label shall 
 indicate manufacturer's name, type of glass, thi ckness, and safety glazing standard with which 
-glass complies.  ",256,Clear
+glass complies.  ",256,Clear,"[256, 264, 256]"
 What type of aluminum fastners should be used for glazed decorative metal railings?," Back-Check No. 2 - ASI 009 January 15, 2016 Lakers Practice Facility Los Angeles, CA RA Project No. 2014-015  
  GLAZED DECORATIVE METAL RAILINGS (EXTERIOR)  057399 - 4  D. Bars and Shapes: ASTM A 276, Type 304.  
 2.6 GLASS AND GLAZING MATERIALS  
@@ -1679,4 +1672,4 @@ current through metal subrail holding glass panel, as standard with manufacturer
 A. Fastener Materials: Unless otherwise indicated, provide the fo llowing:  
 1. Aluminum Components: Type 304 stainless -steel fasteners.  
 2. Stainless -Steel Components: Type 304 stainless -steel fasteners.  
-3. Dissimilar Metals: Type 304 stainless -steel fasteners.",264,Type 304 stainless -steel fasteners. 
+3. Dissimilar Metals: Type 304 stainless -steel fasteners.",264,Type 304 stainless-steel fasteners.,"[253, 261, 259]"

@@ -46,5 +46,6 @@ def extract_relevant_pages_bm25(bm25, pdf_path, query, k=2):
 if __name__ == "__main__":
     bm25 = bm25_obj('Data/Lakers_Specification.pdf')
     output_docs, output_pages = extract_relevant_pages_bm25(bm25, 'Data/Lakers_Specification.pdf', "what is the address of the architect?", 5)
-    print(output_docs, '\n', output_pages)
+    # print(output_docs, '\n', output_pages)
+    print(output_pages)
 

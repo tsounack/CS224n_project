@@ -37,7 +37,8 @@ class PromptTemplate():
                 },
                 {
                     "role": "user",
-                    "content": f"Generate one new query that is relevant to the following query: '{query}'. The query should be concise, informative, and clear and would be similar to the orinal query."
+                    "content": f"""Generate one new query that is relevant to the following query: '{query}'. The query should be concise, informative, and clear and would be similar to the original query. Note
+                    the query is being used to better search through a contract document so create a query where the answer would likely be located in a similar place in the contract as the original query."""
                 },
                 {
                     "role": "assistant",
